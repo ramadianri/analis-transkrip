@@ -1,0 +1,34 @@
+ 
+Biodata:
+---------------------
+Nama        : FULAN
+No. HP      : 08525341XXXX
+Tahun Masuk : 2022
+Semester    : 7
+Total SKS   : 108
+IPK         : 2.53
+ 
+Mata Kuliah wajib yang belum diambil (berdasarkan semester):
+------------------------------------------------------------
+ Kode MK                  Nama  SKS  Semester
+FIS21414         Fisika Modern    3         4
+FIS21415  Instrumentasi Fisika    4         4
+FIS21518      Fisika Statistik    3         5
+MKF21001 Metodologi Penelitian    2         5
+ 
+Mata Kuliah dengan nilai di bawah C:
+Total : 19 SKS
+------------------------------------
+ Kode MK                  Nama  SKS Nilai  Semester Sifat
+FIS21201 Fisika Dasar Lanjutan    3    D+         2 Wajib
+FIS21203      Statistika Dasar    3     D         2 Wajib
+FIS21309     Elektronika Dasar    4     E         3 Wajib
+FIS21312        Metode Numerik    3     D         3 Wajib
+MKF21011      Matematika Dasar    4    D+         1 Wajib
+MKF21012        Bahasa Inggris    2     D         2 Wajib
+ 
+Kesesuaian jumlah SKS:
+(total yang sudah ditempuh / total seharusnya (berdasarkan semester)
+Catatan: Perhatikan total SKS wajib yg belum diambil di atas (jika ada)
+-----------------------------------------------------------------------
+108 / 121

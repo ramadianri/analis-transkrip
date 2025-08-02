@@ -1,0 +1,865 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+            <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MN365DZDTN" type="70b2ce644cd925e1db1c65a2-text/javascript"></script>
+        <script type="70b2ce644cd925e1db1c65a2-text/javascript">
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-MN365DZDTN');
+        </script>
+            <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Sistem Informasi Akademik Universitas Mataram" />
+<meta name="author" content="Universitas Mataram" />
+    <title>Mahasiswa &raquo; Sistem Informasi Akademik</title>
+    <link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/jquery-ui.css" />
+<link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/bootstrap.min.css" />
+<link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/font-awesome.min.css" />
+<link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/select2.min.css" />
+<link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/summernote.css" />
+<link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/style.css" />
+<link rel="stylesheet" href="https://sia.unram.ac.id/assets/styles/dosen.css" />
+<link rel="shortcut icon" type="image/png" href="https://sia.unram.ac.id/assets/images/favicon.png" sizes="16x16" />
+<link rel="apple-touch-icon" href="https://sia.unram.ac.id/assets/images/favicon.png" />
+<link rel="apple-touch-icon-precomposed" href="https://sia.unram.ac.id/assets/images/favicon.png" />
+    <script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/jquery.min.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/jquery.ui.min.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/bootstrap.min.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/bootstrapValidator.min.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/select2.full.min.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/summernote.min.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/highcharts.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/ga.js"></script>
+<script type="70b2ce644cd925e1db1c65a2-text/javascript" src="https://sia.unram.ac.id/assets/scripts/tawk.to.js"></script>
+
+    <link rel="stylesheet" href="https://sia-chat.unram.ac.id/fe/assets/embed/chat.min.css" />
+</head>
+
+<body class="view dosen">
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Ganti navigasi</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://sia.unram.ac.id/index.php">Sistem Informasi Akademik</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://sia.unram.ac.id/index.php"><i
+                                class="glyphicon glyphicon-home"></i>&nbsp;&nbsp;Beranda</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;Pengaturan                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="https://sia.unram.ac.id/index.php/dosen/pengaturan/akun"><i
+                                        class="glyphicon glyphicon-lock"></i> Akun</a></li>
+                        <li><a href="https://sia.unram.ac.id/index.php/info/bantuan"><i
+                                        class="glyphicon glyphicon-question-sign"></i> Bantuan</a></li>
+                        <li class="divider"></li>
+                        <li><a href="https://sso.unram.ac.id/auth/sia?logout"><i
+                                        class="glyphicon glyphicon-off"></i> Keluar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown visible-xs visible-sm">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="glyphicon glyphicon-th-list"></i>&nbsp;&nbsp;Menu <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                                                    <li>
+                                <a href="https://sia.unram.ac.id/index.php/dosen/">
+                                    <i class="fa fa-user"></i> Dosen                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://sia.unram.ac.id/index.php/dosen/nilai">
+                                    <i class="fa fa-database"></i> Nilai                                </a>
+                            </li>
+                                                    <li>
+                                <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa">
+                                    <i class="fa fa-users"></i> Mahasiswa                                </a>
+                            </li>
+                                                <li>
+                            <a href="https://prasarana.unram.ac.id/index.php/jadwal/452011/199208072022031008"
+                               target="_blank">
+                                <i class="fa fa-calendar"></i> Jadwal
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img alt="id"
+                     src="https://sia.unram.ac.id/assets/images/id.svg"
+                     width="16px"/>
+                &nbsp;<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                                    <li>
+                        <a href="/index.php/dosen/mahasiswa/G1B022059/histori?tahun_akademik_nilai=">
+                            <img alt="ID"
+                                 src="https://sia.unram.ac.id/assets/images/id.svg"
+                                 width="16px"/>
+                            &nbsp;Bahasa                        </a>
+                    </li>
+                                    <li>
+                        <a href="/index.en.php/dosen/mahasiswa/G1B022059/histori?tahun_akademik_nilai=">
+                            <img alt="ID"
+                                 src="https://sia.unram.ac.id/assets/images/en.svg"
+                                 width="16px"/>
+                            &nbsp;English                        </a>
+                    </li>
+                            </ul>
+        </li>
+                    </ul>
+        </div>
+    </div>
+</div>
+    <div class="container-fluid mahasiswa">
+        <div class="row">
+            <div class="col-md-2 sidebar visible-md visible-lg">
+                
+<ul class="nav nav-sidebar">
+            <li class="">
+            <a href="https://sia.unram.ac.id/index.php/dosen/">
+                <i class="fa fa-user"></i> Dosen            </a>
+        </li>
+            <li class="">
+            <a href="https://sia.unram.ac.id/index.php/dosen/nilai">
+                <i class="fa fa-database"></i> Nilai            </a>
+        </li>
+            <li class="active">
+            <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa">
+                <i class="fa fa-users"></i> Mahasiswa            </a>
+        </li>
+        <li>
+        <a href="https://prasarana.unram.ac.id/index.php/jadwal/452011/199208072022031008"
+           target="_blank">
+            <i class="fa fa-calendar"></i> Jadwal
+        </a>
+    </li>
+</ul>
+<div class="nav nav-sidebar statistik">
+    <h3>Aktivitas</h3>
+    <p>
+        <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa?filter=pesan_baru" class="btn btn-sm btn-danger"><i
+                    class="fa fa-envelope"></i></a>
+        &nbsp;&nbsp;Pesan baru dari mahasiswa&nbsp;&nbsp;<span
+                class="badge">1</span>
+    </p>
+    <p>
+        <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa?filter=krs_menunggu" class="btn btn-sm btn-info"><i
+                    class="fa fa-sitemap"></i></a>
+        &nbsp;&nbsp;KRS menunggu konfirmasi&nbsp;&nbsp;<span
+                class="badge">3</span>
+    </p>
+    <p>
+        <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa?filter=krs_diterima" class="btn btn-sm btn-success"><i
+                    class="fa fa-sitemap"></i></a>
+        &nbsp;&nbsp;KRS telah diterima&nbsp;&nbsp;<span
+                class="badge">0</span>
+    </p>
+    <p>
+        <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa?filter=krs_ditolak" class="btn btn-sm btn-danger"><i
+                    class="fa fa-sitemap"></i></a>
+        &nbsp;&nbsp;KRS telah ditolak&nbsp;&nbsp;<span class="badge">0</span>
+    </p>
+    <p>
+        <a href="https://sia.unram.ac.id/index.php/dosen/mahasiswa?filter=belum_krs" class="btn btn-sm btn-default"><i
+                    class="fa fa-sitemap"></i></a>
+        &nbsp;&nbsp;Belum mengajukan KRS&nbsp;&nbsp;<span
+                class="badge">15</span>
+    </p>
+</div>            </div>
+            <div class="col-md-10 main">
+
+                <!-- histori nilai -->
+                
+                    <h1 class="page-header">
+                        Riwayat                        <small>G1B022059</small>
+                    </h1>
+
+                    <h3 class="text-muted">Biodata</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>Nama</th>
+                                    <td>FULAN </td>
+                                </tr>
+                                <tr>
+                                    <th>Agama</th>
+                                    <td>Islam</td>
+                                </tr>
+                                <tr>
+                                    <th>Shift</th>
+                                    <td>Reguler</td>
+                                </tr>
+                                <tr>
+                                    <th>Tanggal Lahir</th>
+                                    <td>2001-06-05</td>
+                                </tr>
+                                <tr>
+                                    <th>Jenis Kelamin</th>
+                                    <td>Laki-laki</td>
+                                </tr>
+                                <tr>
+                                    <th>Alamat</th>
+                                    <td>Jln. Lintas Bima- sape</td>
+                                </tr>
+                                <tr>
+                                    <th>No. HP</th>
+                                    <td>08525341XXXX</td>
+                                </tr>
+                            </table>
+
+                            <h3 class="text-muted">Akademik</h3>
+                            <table class="table table-hover table-krs-head">
+                                <tr>
+                                    <th>Tahun Akademik</th>
+                                    <td>
+                                        <form class="tahun-akademik">
+                                            <select class="form-control" name="tahun_akademik_nilai">
+                                                <optgroup label="Semua">
+                                                    <option value>Transkrip Nilai</option>
+                                                </optgroup>
+                                                                                                    <optgroup label="KHS 2025">
+                                                                                                                    <option value="20254"
+                                                                     >2025 (KSP-2)</option>
+                                                                                                                    <option value="20253"
+                                                                     >2025 (KSP-1)</option>
+                                                                                                                    <option value="20252"
+                                                                     >2025 (Genap)</option>
+                                                                                                                    <option value="20251"
+                                                                     >2025 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2024">
+                                                                                                                    <option value="20244"
+                                                                     >2024 (KSP-2)</option>
+                                                                                                                    <option value="20243"
+                                                                     >2024 (KSP-1)</option>
+                                                                                                                    <option value="20242"
+                                                                     >2024 (Genap)</option>
+                                                                                                                    <option value="20241"
+                                                                     >2024 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2023">
+                                                                                                                    <option value="20234"
+                                                                     >2023 (KSP-2)</option>
+                                                                                                                    <option value="20233"
+                                                                     >2023 (KSP-1)</option>
+                                                                                                                    <option value="20232"
+                                                                     >2023 (Genap)</option>
+                                                                                                                    <option value="20231"
+                                                                     >2023 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2022">
+                                                                                                                    <option value="20224"
+                                                                     >2022 (KSP-2)</option>
+                                                                                                                    <option value="20223"
+                                                                     >2022 (KSP-1)</option>
+                                                                                                                    <option value="20222"
+                                                                     >2022 (Genap)</option>
+                                                                                                                    <option value="20221"
+                                                                     >2022 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2021">
+                                                                                                                    <option value="20214"
+                                                                     >2021 (KSP-2)</option>
+                                                                                                                    <option value="20213"
+                                                                     >2021 (KSP-1)</option>
+                                                                                                                    <option value="20212"
+                                                                     >2021 (Genap)</option>
+                                                                                                                    <option value="20211"
+                                                                     >2021 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2020">
+                                                                                                                    <option value="20204"
+                                                                     >2020 (KSP-2)</option>
+                                                                                                                    <option value="20203"
+                                                                     >2020 (KSP-1)</option>
+                                                                                                                    <option value="20202"
+                                                                     >2020 (Genap)</option>
+                                                                                                                    <option value="20201"
+                                                                     >2020 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2019">
+                                                                                                                    <option value="20194"
+                                                                     >2019 (KSP-2)</option>
+                                                                                                                    <option value="20193"
+                                                                     >2019 (KSP-1)</option>
+                                                                                                                    <option value="20192"
+                                                                     >2019 (Genap)</option>
+                                                                                                                    <option value="20191"
+                                                                     >2019 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2018">
+                                                                                                                    <option value="20184"
+                                                                     >2018 (KSP-2)</option>
+                                                                                                                    <option value="20183"
+                                                                     >2018 (KSP-1)</option>
+                                                                                                                    <option value="20182"
+                                                                     >2018 (Genap)</option>
+                                                                                                                    <option value="20181"
+                                                                     >2018 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2017">
+                                                                                                                    <option value="20174"
+                                                                     >2017 (KSP-2)</option>
+                                                                                                                    <option value="20173"
+                                                                     >2017 (KSP-1)</option>
+                                                                                                                    <option value="20172"
+                                                                     >2017 (Genap)</option>
+                                                                                                                    <option value="20171"
+                                                                     >2017 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2016">
+                                                                                                                    <option value="20164"
+                                                                     >2016 (KSP-2)</option>
+                                                                                                                    <option value="20163"
+                                                                     >2016 (KSP-1)</option>
+                                                                                                                    <option value="20162"
+                                                                     >2016 (Genap)</option>
+                                                                                                                    <option value="20161"
+                                                                     >2016 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2015">
+                                                                                                                    <option value="20154"
+                                                                     >2015 (KSP-2)</option>
+                                                                                                                    <option value="20153"
+                                                                     >2015 (KSP-1)</option>
+                                                                                                                    <option value="20152"
+                                                                     >2015 (Genap)</option>
+                                                                                                                    <option value="20151"
+                                                                     >2015 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2014">
+                                                                                                                    <option value="20144"
+                                                                     >2014 (KSP-2)</option>
+                                                                                                                    <option value="20143"
+                                                                     >2014 (KSP-1)</option>
+                                                                                                                    <option value="20142"
+                                                                     >2014 (Genap)</option>
+                                                                                                                    <option value="20141"
+                                                                     >2014 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2013">
+                                                                                                                    <option value="20134"
+                                                                     >2013 (KSP-2)</option>
+                                                                                                                    <option value="20133"
+                                                                     >2013 (KSP-1)</option>
+                                                                                                                    <option value="20132"
+                                                                     >2013 (Genap)</option>
+                                                                                                                    <option value="20131"
+                                                                     >2013 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2012">
+                                                                                                                    <option value="20124"
+                                                                     >2012 (KSP-2)</option>
+                                                                                                                    <option value="20123"
+                                                                     >2012 (KSP-1)</option>
+                                                                                                                    <option value="20122"
+                                                                     >2012 (Genap)</option>
+                                                                                                                    <option value="20121"
+                                                                     >2012 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2011">
+                                                                                                                    <option value="20114"
+                                                                     >2011 (KSP-2)</option>
+                                                                                                                    <option value="20113"
+                                                                     >2011 (KSP-1)</option>
+                                                                                                                    <option value="20112"
+                                                                     >2011 (Genap)</option>
+                                                                                                                    <option value="20111"
+                                                                     >2011 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2010">
+                                                                                                                    <option value="20104"
+                                                                     >2010 (KSP-2)</option>
+                                                                                                                    <option value="20103"
+                                                                     >2010 (KSP-1)</option>
+                                                                                                                    <option value="20102"
+                                                                     >2010 (Genap)</option>
+                                                                                                                    <option value="20101"
+                                                                     >2010 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2009">
+                                                                                                                    <option value="20094"
+                                                                     >2009 (KSP-2)</option>
+                                                                                                                    <option value="20093"
+                                                                     >2009 (KSP-1)</option>
+                                                                                                                    <option value="20092"
+                                                                     >2009 (Genap)</option>
+                                                                                                                    <option value="20091"
+                                                                     >2009 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2008">
+                                                                                                                    <option value="20084"
+                                                                     >2008 (KSP-2)</option>
+                                                                                                                    <option value="20083"
+                                                                     >2008 (KSP-1)</option>
+                                                                                                                    <option value="20082"
+                                                                     >2008 (Genap)</option>
+                                                                                                                    <option value="20081"
+                                                                     >2008 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2007">
+                                                                                                                    <option value="20074"
+                                                                     >2007 (KSP-2)</option>
+                                                                                                                    <option value="20073"
+                                                                     >2007 (KSP-1)</option>
+                                                                                                                    <option value="20072"
+                                                                     >2007 (Genap)</option>
+                                                                                                                    <option value="20071"
+                                                                     >2007 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2006">
+                                                                                                                    <option value="20064"
+                                                                     >2006 (KSP-2)</option>
+                                                                                                                    <option value="20063"
+                                                                     >2006 (KSP-1)</option>
+                                                                                                                    <option value="20062"
+                                                                     >2006 (Genap)</option>
+                                                                                                                    <option value="20061"
+                                                                     >2006 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2005">
+                                                                                                                    <option value="20054"
+                                                                     >2005 (KSP-2)</option>
+                                                                                                                    <option value="20053"
+                                                                     >2005 (KSP-1)</option>
+                                                                                                                    <option value="20052"
+                                                                     >2005 (Genap)</option>
+                                                                                                                    <option value="20051"
+                                                                     >2005 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2004">
+                                                                                                                    <option value="20044"
+                                                                     >2004 (KSP-2)</option>
+                                                                                                                    <option value="20043"
+                                                                     >2004 (KSP-1)</option>
+                                                                                                                    <option value="20042"
+                                                                     >2004 (Genap)</option>
+                                                                                                                    <option value="20041"
+                                                                     >2004 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2003">
+                                                                                                                    <option value="20034"
+                                                                     >2003 (KSP-2)</option>
+                                                                                                                    <option value="20033"
+                                                                     >2003 (KSP-1)</option>
+                                                                                                                    <option value="20032"
+                                                                     >2003 (Genap)</option>
+                                                                                                                    <option value="20031"
+                                                                     >2003 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2002">
+                                                                                                                    <option value="20024"
+                                                                     >2002 (KSP-2)</option>
+                                                                                                                    <option value="20023"
+                                                                     >2002 (KSP-1)</option>
+                                                                                                                    <option value="20022"
+                                                                     >2002 (Genap)</option>
+                                                                                                                    <option value="20021"
+                                                                     >2002 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2001">
+                                                                                                                    <option value="20014"
+                                                                     >2001 (KSP-2)</option>
+                                                                                                                    <option value="20013"
+                                                                     >2001 (KSP-1)</option>
+                                                                                                                    <option value="20012"
+                                                                     >2001 (Genap)</option>
+                                                                                                                    <option value="20011"
+                                                                     >2001 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                                    <optgroup label="KHS 2000">
+                                                                                                                    <option value="20004"
+                                                                     >2000 (KSP-2)</option>
+                                                                                                                    <option value="20003"
+                                                                     >2000 (KSP-1)</option>
+                                                                                                                    <option value="20002"
+                                                                     >2000 (Genap)</option>
+                                                                                                                    <option value="20001"
+                                                                     >2000 (Ganjil)</option>
+                                                                                                            </optgroup>
+                                                                                            </select>
+                                        </form>
+                                    </td>
+                                </tr>
+                                                                    <tr>
+                                        <th>Tahun Masuk</th>
+                                        <td>
+                                            2022                                            (
+                                            Ganjil                                            )
+                                        </td>
+                                    </tr>
+                                                                <tr>
+                                    <th>Total SKS</th>
+                                    <td>108</td>
+                                </tr>
+                                <tr>
+                                    <th>IPK</th>
+                                    <td>2.53</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>Status</th>
+                                    <td>Aktif</td>
+                                </tr>
+                                <tr>
+                                    <th>Semester Awal</th>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>SKS diakui</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>Provinsi SMA Asal</th>
+                                    <td>Nusa Tenggara Barat</td>
+                                </tr>
+                                                                    <tr>
+                                        <td colspan="2">
+                                            <img class="thumbnail"
+                                                 src="https://sia.unram.ac.id/index.php/foto/mahasiswa/G1B022059/300/300"
+                                                 alt="FULAN ">
+                                        </td>
+                                    </tr>
+                                                            </table>
+                        </div>
+                    </div>
+
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Kode MK</th>
+                            <th>Nama</th>
+                            <th>SKS</th>
+                            <th>Nilai</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                                                    <tr>
+                                <td>PIF21025</td>
+                                <td>Seismologi</td>
+                                <td>3</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>PIF21024</td>
+                                <td>Metode Seismik</td>
+                                <td>3</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>PIF21022</td>
+                                <td>Pemetaan dan SIG</td>
+                                <td>3</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>PIF21020</td>
+                                <td>Metode Geolistrik dan EM</td>
+                                <td>3</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21626</td>
+                                <td>Seminar</td>
+                                <td>2</td>
+                                <td>A</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21625</td>
+                                <td>Kewirausahaan</td>
+                                <td>2</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21624</td>
+                                <td>Sains Data (Data Science)</td>
+                                <td>3</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21523</td>
+                                <td>Pengantar Geofisika</td>
+                                <td>3</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21522</td>
+                                <td>Fisika Kuantum</td>
+                                <td>4</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21521</td>
+                                <td>Fisika Inti</td>
+                                <td>3</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21520</td>
+                                <td>Optika Modern</td>
+                                <td>3</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21519</td>
+                                <td>Fisika Komputasi</td>
+                                <td>3</td>
+                                <td>C</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21309</td>
+                                <td>Elektronika Dasar</td>
+                                <td>4</td>
+                                <td>E</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKU21001</td>
+                                <td>Pendidikan Agama</td>
+                                <td>2</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21012</td>
+                                <td>Bahasa Inggris</td>
+                                <td>2</td>
+                                <td>D</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21417</td>
+                                <td>Fisika Zat Padat</td>
+                                <td>4</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21416</td>
+                                <td>Gelombang</td>
+                                <td>3</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21413</td>
+                                <td>Listrik Magnet</td>
+                                <td>4</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21411</td>
+                                <td>Fisika Eksperimen 2</td>
+                                <td>2</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21312</td>
+                                <td>Metode Numerik</td>
+                                <td>3</td>
+                                <td>D</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21310</td>
+                                <td>Fisika Eksperimen 1</td>
+                                <td>2</td>
+                                <td>C</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21307</td>
+                                <td>Mekanika Klasik</td>
+                                <td>4</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21306</td>
+                                <td>Fisika Matematika 2</td>
+                                <td>4</td>
+                                <td>C</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21308</td>
+                                <td>Termodinamika</td>
+                                <td>3</td>
+                                <td>C</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKU21002</td>
+                                <td>Pancasila</td>
+                                <td>2</td>
+                                <td>B+</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKU21001</td>
+                                <td>Pendidikan Agama</td>
+                                <td>2</td>
+                                <td>E</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21012</td>
+                                <td>Bahasa Inggris</td>
+                                <td>2</td>
+                                <td>T</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21205</td>
+                                <td>Fisika Matematika 1</td>
+                                <td>4</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21204</td>
+                                <td>Pemrog. Komputer</td>
+                                <td>3</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21203</td>
+                                <td>Statistika Dasar</td>
+                                <td>3</td>
+                                <td>D</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21202</td>
+                                <td>Prak. Fisika Dasar Lanjutan</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>FIS21201</td>
+                                <td>Fisika Dasar Lanjutan</td>
+                                <td>3</td>
+                                <td>D+</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKU21004</td>
+                                <td>Bahasa Indonesia</td>
+                                <td>2</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKU21003</td>
+                                <td>Kewarganegaraan</td>
+                                <td>2</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21011</td>
+                                <td>Matematika Dasar  </td>
+                                <td>4</td>
+                                <td>D+</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21010</td>
+                                <td>Prak. Kimia Dasar</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21009</td>
+                                <td>Kimia Dasar </td>
+                                <td>3</td>
+                                <td>C</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21008</td>
+                                <td>Prak. Fisika Dasar </td>
+                                <td>1</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21007</td>
+                                <td>Fisika Dasar </td>
+                                <td>3</td>
+                                <td>C+</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21006</td>
+                                <td>Prak. Biologi Dasar</td>
+                                <td>1</td>
+                                <td>B</td>
+                            </tr>
+                                                    <tr>
+                                <td>MKF21005</td>
+                                <td>Biologi Dasar </td>
+                                <td>3</td>
+                                <td>B</td>
+                            </tr>
+                                                </tbody>
+                    </table>
+
+                    <script type="70b2ce644cd925e1db1c65a2-text/javascript">
+                        $('.tahun-akademik select').on('change', function () {
+                            this.form.submit();
+                        });
+                    </script>
+
+                    <!-- KRS -->
+                            </div>
+        </div>
+    </div>
+    <script type="70b2ce644cd925e1db1c65a2-text/javascript">
+        var stat = false;
+        $(".nonaktif").hide();
+        $("#show-hide").click(function () {
+            if (stat) {
+                $(this).html("<i class='glyphicon glyphicon-chevron-down'></i> Show All");
+                $(".nonaktif").hide("slow");
+                stat = false;
+            } else {
+                $(this).html("<i class='glyphicon glyphicon-chevron-up'></i> Hide");
+                $(".nonaktif").show("slow");
+                stat = true;
+            }
+        });
+    </script>
+
+    
+<hr>
+<div class="container">
+    <footer>
+        <p>
+            &copy; Hak Cipta 2025 Universitas Mataram            <br/>
+            <i>Beban waktu0.0603detik</i>
+        </p>
+    </footer>
+</div>
+
+
+
+<script type="70b2ce644cd925e1db1c65a2-text/javascript">
+    $(document).ready(function () {
+        $('a.aksi-hapus').click(function () {
+            return confirm('Apakah anda yakin untuk menghapus?');
+        });
+        $('a.confirm').on('click', function (e) {
+            e.preventDefault();
+            if (confirm('Apakah anda yakin?'))
+                window.location.replace($(this).attr('href'));
+        });
+    });
+</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="70b2ce644cd925e1db1c65a2-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"255bf644e8a7428082b8e5eafc6ac84d","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
