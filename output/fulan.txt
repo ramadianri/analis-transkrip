@@ -8,6 +8,11 @@ Semester    : 7
 Total SKS   : 108
 IPK         : 2.53
  
+Proporsi Mata Kuliah wajib dan pilihan:
+---------------------------------------
+Total SKS Mata Kuliah wajib   : 96 SKS
+Total SKS Mata Kuliah pilihan : 12 SKS
+ 
 Mata Kuliah wajib yang belum diambil (berdasarkan semester):
 ------------------------------------------------------------
  Kode MK                  Nama  SKS  Semester

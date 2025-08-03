@@ -270,6 +270,15 @@ def analyze_transcript(html_file_path, kurikulum_file_path):
         print("[ERROR] Total SKS tidak sesuai. Keluar dari program")
         return None
 
+    # Cek proporsi Mata Kuliah wajib dan pilihan
+    output_lines.append(" ")
+    output_lines.append('Proporsi Mata Kuliah wajib dan pilihan:')
+    output_lines.append('---------------------------------------')
+    wajib_mask = df['Sifat'] == 'Wajib'
+    nilai_not_nan_mask = ~df['Nilai'].isna()
+    output_lines.append(f'Total SKS Mata Kuliah wajib   : {df[wajib_mask & nilai_not_nan_mask]['SKS'].sum()} SKS')
+    output_lines.append(f'Total SKS Mata Kuliah pilihan : {df[df['Sifat'] == 'Pilihan']['SKS'].sum()} SKS')
+
     # Cek Mata Kuliah wajib yang belum diambil
     output_lines.append(" ")
     output_lines.append('Mata Kuliah wajib yang belum diambil (berdasarkan semester):')
