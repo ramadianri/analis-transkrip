@@ -200,7 +200,7 @@ def analyze_transcript(html_file_path):
     if df_transkrip is None:
         print("[ERROR] Gagal mengkonversi transkrip ke DataFrame.")
         return None
-
+    
     # Menghilangkan data yang sama
     df_transkrip.drop_duplicates(inplace=True)
 
@@ -216,11 +216,11 @@ def analyze_transcript(html_file_path):
         'C': 2.0,
         'D+': 1.5,
         'D': 1.0,
-        'E': 0.0,
+        'E': 0.5,
         'T': 0.0
     }
     df_transkrip['Nilai Angka'] = df_transkrip['Nilai Huruf'].map(nilai_mapping)
-
+    
     # Menghilangkan duplikasi mata kuliah yang pernah diulang (diambil nilai tertinggi)
     if df_transkrip['Nama'].duplicated().any() == True:
         duplicated_mask = df_transkrip['Nama'].duplicated(keep=False)
@@ -230,7 +230,7 @@ def analyze_transcript(html_file_path):
             nilai_mask = df_transkrip['Nilai Angka'] < nilai_tertinggi
             mask_to_drop = matkul_mask & nilai_mask
             df_transkrip = df_transkrip[~mask_to_drop]
-
+    
     # Menghapus kolom
     df_transkrip.drop(['Nilai Angka'], axis=1, inplace=True)
 
@@ -242,7 +242,7 @@ def analyze_transcript(html_file_path):
 
     # Menggabungkan dataframe
     df = pd.merge(df_transkrip, df_kurikulum, on='Kode MK', how='outer')
-
+    
     # Memperbaiki kolom Nama
     df['Nama_x'] = df.apply(
         lambda row: row['Nama_y'] if pd.isna(row['Nama_x']) else row['Nama_x'],
