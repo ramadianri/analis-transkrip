@@ -262,10 +262,10 @@ def analyze_transcript(html_file_path):
     # Mengisi nilai-nilai kosong
     df.fillna({'Semester': 0}, inplace=True)
     df.fillna({'Sifat': 'Pilihan'}, inplace=True)
-
+    
     # Memperbaiki tipe data
     df['Semester'] = df['Semester'].apply(lambda x: int(x))
-    df['SKS'] = df['SKS'].apply(lambda x: int(x))
+    df['SKS'] = df['SKS'].apply(lambda x: int(x) if x != '' else 0)
 
     # cross-check jumlah SKS pada dataframe dan html
     nilai_non_T_mask = df['Nilai'] != 'T'
@@ -303,8 +303,8 @@ def analyze_transcript(html_file_path):
 
     # Kesesuian antara jumlah SKS yang sudah ditempuh dan jumlah SKS yang seharusnya sudah ditempuh
     jumlah_sks_semester = [0, 20, 40, 60, 80, 101, 121, 136, 144]
-    if semester > 8:
-        semester = 8
+    if semester > 9:
+        semester = 9
     output_lines.append(" ")
     output_lines.append('Kesesuaian jumlah SKS:')
     output_lines.append('(total yang sudah ditempuh / total seharusnya (berdasarkan semester)')
