@@ -102,14 +102,13 @@ def extract_specific_values(html_content):
                 
     return extracted_data
 
-def analyze_transcript(html_file_path, kurikulum_file_path):
+def analyze_transcript(html_file_path):
     """
     Fungsi utama untuk menganalisis transkrip akademik dan mengembalikan 
     string dari hasil analisis.
     
     Args:
         html_file_path (str): Path ke file transkrip HTML.
-        kurikulum_file_path (str): Path ke file kurikulum Excel.
     
     Returns:
         str: String yang berisi hasil analisis yang akan ditulis ke file.
@@ -120,18 +119,6 @@ def analyze_transcript(html_file_path, kurikulum_file_path):
     print(f'[INFO] Memproses file: {os.path.basename(html_file_path)}... ', end='')
     try:
         html_content = open(html_file_path, 'r', encoding='utf-8').read()
-        print('berhasil')
-    except FileNotFoundError:
-        print('Gagal: File tidak ditemukan. Pastikan path dan nama file sudah benar.')
-        return None
-    except Exception as e:
-        print(f'Gagal: Terjadi kesalahan lain. Detail kesalahan: {e}')
-        return None
-
-    # Mengkonversi tabel pada file kurikulum ke dataframe
-    print(f'[INFO] Menggunakan kurikulum: {os.path.basename(kurikulum_file_path)}... ', end='')
-    try:
-        df_kurikulum = pd.read_excel(kurikulum_file_path)
         print('berhasil')
     except FileNotFoundError:
         print('Gagal: File tidak ditemukan. Pastikan path dan nama file sudah benar.')
@@ -188,6 +175,24 @@ def analyze_transcript(html_file_path, kurikulum_file_path):
         
     else:
         print("[INFO] Tidak dapat menemukan nilai-nilai yang diperlukan")
+        return None
+
+    # Gunakan kurikulum sesuai tahun masuk pada transkrip
+    if tahun_masuk < 2021:
+        kurikulum_file = kurikulum_files[0]
+    elif tahun_masuk < 2025:
+        kurikulum_file = kurikulum_files[1]
+    
+    # Mengkonversi tabel pada file kurikulum ke dataframe
+    print(f'[INFO] Menggunakan kurikulum: {os.path.basename(kurikulum_file)}... ', end='')
+    try:
+        df_kurikulum = pd.read_excel(kurikulum_file)
+        print('berhasil')
+    except FileNotFoundError:
+        print('Gagal: File tidak ditemukan. Pastikan path dan nama file sudah benar.')
+        return None
+    except Exception as e:
+        print(f'Gagal: Terjadi kesalahan lain. Detail kesalahan: {e}')
         return None
 
     # Mengkonversi tabel pada file htlm ke dataframe
@@ -326,9 +331,6 @@ if __name__ == "__main__":
         print("[INFO] Tidak ada file kurikulum (.xlsx) yang ditemukan. Keluar.")
         sys.exit()
     
-    # Gunakan kurikulum pertama yang ditemukan untuk semua transkrip
-    kurikulum_file = kurikulum_files[0]
-
     # Dapatkan daftar semua file transkrip
     transkrip_files = glob.glob(os.path.join(transkrip_dir, '*.html'))
     if not transkrip_files:
@@ -338,7 +340,7 @@ if __name__ == "__main__":
     # Loop melalui setiap file transkrip dan jalankan analisis
     for transkrip_file in transkrip_files:
         # Analisis transkrip dan dapatkan output dalam bentuk string
-        analysis_result = analyze_transcript(transkrip_file, kurikulum_file)
+        analysis_result = analyze_transcript(transkrip_file)
         
         if analysis_result:
             # Tentukan nama file output
