@@ -281,8 +281,8 @@ def analyze_transcript(html_file_path):
     output_lines.append('---------------------------------------')
     wajib_mask = df['Sifat'] == 'Wajib'
     nilai_not_nan_mask = ~df['Nilai'].isna()
-    output_lines.append(f'Total SKS Mata Kuliah wajib   : {df[wajib_mask & nilai_not_nan_mask]['SKS'].sum()} SKS')
-    output_lines.append(f'Total SKS Mata Kuliah pilihan : {df[df['Sifat'] == 'Pilihan']['SKS'].sum()} SKS')
+    output_lines.append(f"Total SKS Mata Kuliah wajib   : {df[wajib_mask & nilai_not_nan_mask]['SKS'].sum()} SKS")
+    output_lines.append(f"Total SKS Mata Kuliah pilihan : {df[df['Sifat'] == 'Pilihan']['SKS'].sum()} SKS")
 
     # Cek Mata Kuliah wajib yang belum diambil
     output_lines.append(" ")
@@ -297,7 +297,7 @@ def analyze_transcript(html_file_path):
     nilai_Dp_mask = df['Nilai'] == 'D+'
     output_lines.append(" ")
     output_lines.append('Mata Kuliah dengan nilai di bawah C:')
-    output_lines.append(f'Total : {df[nilai_T_mask | nilai_E_mask | nilai_D_mask | nilai_Dp_mask]['SKS'].sum()} SKS')
+    output_lines.append(f"Total : {df[nilai_T_mask | nilai_E_mask | nilai_D_mask | nilai_Dp_mask]['SKS'].sum()} SKS")
     output_lines.append('------------------------------------')
     output_lines.append(df[nilai_T_mask | nilai_E_mask | nilai_D_mask | nilai_Dp_mask].to_string(index=False))
 
